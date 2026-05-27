@@ -1,0 +1,511 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#f5f5f5;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container{
+    display:flex;
+    width:100%;
+    height:100vh;
+}
+
+/* ================= LEFT SECTION ================= */
+
+.left-section{
+
+    width:60%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #750000,
+        #b00000,
+        #d10000
+    );
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* ================= DOT PATTERN ================= */
+
+.dot-pattern{
+
+    position:absolute;
+
+    top:50px;
+    right:80px;
+
+    width:120px;
+    height:120px;
+
+    background-image:
+    radial-gradient(
+        rgba(255,255,255,0.55) 2px,
+        transparent 2px
+    );
+
+    background-size:20px 20px;
+}
+
+/* ================= WAVE EFFECT ================= */
+
+.wave{
+
+    position:absolute;
+
+    bottom:-260px;
+    left:-260px;
+
+    width:850px;
+    height:850px;
+
+    border-radius:50%;
+
+    background:
+    repeating-radial-gradient(
+        circle,
+        transparent 0px,
+        transparent 10px,
+        rgba(255,255,255,0.13) 12px
+    );
+}
+
+/* ================= CARD AREA ================= */
+
+.cards{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    z-index:2;
+}
+
+/* ================= CARD ================= */
+
+.card{
+
+    width:240px;
+    height:240px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.20);
+
+    transition:0.3s ease;
+
+    margin-top:30px;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card i{
+
+    font-size:65px;
+
+    color:#9b0000;
+
+    margin-bottom:18px;
+}
+
+.card h2{
+
+    color:#9b0000;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+
+    letter-spacing:1px;
+}
+
+.line{
+
+    width:45px;
+    height:4px;
+
+    background:#9b0000;
+
+    border-radius:20px;
+}
+
+/* ================= RIGHT SECTION ================= */
+
+.right-section{
+
+    width:40%;
+
+    background:#f7f7f7;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow-y:auto;
+}
+
+/* ================= LOGIN BOX ================= */
+
+.login-box{
+
+    width:420px;
+
+    background:#fff;
+
+    border:1.5px solid #d10000;
+
+    border-radius:22px;
+
+    padding:35px 40px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ================= REGISTER BOX ================= */
+
+.register-box{
+
+    transform:scale(0.92);
+
+    padding-top:28px;
+    padding-bottom:28px;
+}
+
+/* ================= LOGO ================= */
+
+.logo-section{
+
+    text-align:center;
+
+    margin-bottom:22px;
+}
+
+.logo-section img{
+
+    width:110px;
+}
+
+/* ================= INPUT BOX ================= */
+
+.input-box{
+
+    width:100%;
+    height:54px;
+
+    border:1px solid #dddddd;
+
+    border-radius:10px;
+
+    margin-bottom:18px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 16px;
+
+    background:#fff;
+
+    transition:0.3s;
+}
+
+.input-box:focus-within{
+
+    border-color:#b00000;
+
+    box-shadow:0 0 8px rgba(176,0,0,0.15);
+}
+
+.input-box i{
+
+    color:#666;
+
+    font-size:17px;
+}
+
+.input-box input{
+
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    padding-left:14px;
+
+    font-size:16px;
+
+    background:transparent;
+}
+
+.eye{
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.eye:hover{
+
+    color:#b00000;
+}
+
+/* ================= CAPTCHA ================= */
+
+.captcha{
+
+    width:100%;
+    height:82px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    margin-bottom:24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px;
+
+    background:#fff;
+}
+
+.captcha-left{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+.checkbox{
+
+    width:24px;
+    height:24px;
+
+    border:2px solid #777;
+
+    border-radius:3px;
+}
+
+.captcha-left p{
+
+    font-size:15px;
+}
+
+.captcha-right{
+
+    text-align:center;
+
+    font-size:10px;
+
+    color:#777;
+}
+
+/* ================= BUTTON ================= */
+
+.login-btn{
+
+    width:100%;
+    height:52px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #960000,
+        #d10000
+    );
+
+    color:#fff;
+
+    font-size:20px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:5px;
+    margin-bottom:24px;
+
+    transition:0.3s ease;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(176,0,0,0.25);
+}
+
+/* ================= LINKS ================= */
+
+.links{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+.links a{
+
+    text-decoration:none;
+
+    color:#9b0000;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.links a:hover{
+
+    color:#d10000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .left-section{
+        display:none;
+    }
+
+    .right-section{
+        width:100%;
+    }
+
+    .login-box{
+        width:90%;
+        max-width:420px;
+    }
+}
+
+@media(max-width:500px){
+
+    .login-box{
+        padding:25px;
+    }
+
+    .input-box{
+        height:50px;
+    }
+
+    .input-box input{
+        font-size:15px;
+    }
+
+    .login-btn{
+        height:50px;
+        font-size:18px;
+    }
+}
+.contact-box{
+
+    width:430px;
+
+    background:white;
+
+    border:1.5px solid #d10000;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.contact-box h2{
+
+    color:#9b0000;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+}
+
+.branch{
+
+    margin-bottom:28px;
+}
+
+.branch h3{
+
+    color:#b67a2d;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+}
+
+.branch p{
+
+    font-size:17px;
+
+    margin-bottom:6px;
+
+    color:#333;
+}
+
+.working-hours{
+
+    margin-top:25px;
+
+    margin-bottom:30px;
+
+    color:#9b6a2b;
+
+    line-height:1.8;
+}
+
+.back-btn{
+
+    color:#008080;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+.back-btn:hover{
+
+    text-decoration:underline;
+}
